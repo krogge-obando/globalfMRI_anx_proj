@@ -11,13 +11,17 @@ This repo provides the code to derive:
 
 ## 🧭 Software used in this project
 
-- FSL version  
+- FSL version 6.0.5.1
 
-FSL is a neuroimaging software that was used to derive our network components thorugh its function *melodic* which conducts independent component analysis. We also used it to identify significant brain clusters that relate our global components using the function *fslrandoimise*
+FSL is a neuroimaging software that was used to derive our network components thorugh its function *melodic* which conducts independent component analysis. We also used it to identify significant brain clusters that relate our global components using the function *fslrandomise*
 
-- Matlab version
+- Matlab version 2024a
 
-- Rstudio version
+Matlab was used to derive the fMRI global components, correlates of the global components, and the functional connectivity of networks pre and post global component regression in the code *Obando_NKI_fMRIglobal_anx.m*
+
+- Rstudio version RStudio/2024.12.0+467
+
+Rstudio was used to conduct statistical analysis to determine if temporal global components related to anxiety,
 
 
 
