@@ -13,7 +13,7 @@ This repo provides the code to derive:
 
 - FSL version 6.0.5.1
 
-FSL is a neuroimaging software that was used to derive our network components thorugh its function *melodic* which conducts independent component analysis. We also used it to identify significant brain clusters that relate our global components using the function *fslrandomise*
+FSL is a neuroimaging software that was used to derive our network components thorugh its function *melodic* which conducts a group independent component analysis. We also used it to identify significant brain clusters that relate our global components using the function *fslrandomise*
 
 - Matlab version 2024a
 
@@ -21,7 +21,14 @@ Matlab was used to derive the fMRI global components, correlates of the global c
 
 - Rstudio version RStudio/2024.12.0+467
 
-Rstudio was used to conduct statistical analysis to determine if temporal global components related to anxiety,
+Rstudio was used to conduct statistical analysis and visualizations to determine if temporal global components related to anxiety in code *Obando_GlobalComponents_Anxiety.R, and if any brain network connectivity measures related to anxiety pre and post global signal regression *Obando_Network_FC_pre_post_Regress.R*
+
+## 📑 How to navigate the repo??
+
+This repo was designed with two folders: 
+
+1. codes, to see the code used to derive any of the things we stated in our *Highlights* go here, for key information of what the code does go to the section  *folder codes info*
+2. data, due to our compliance with the Nathan Klein Institute Rockland we are unable to share the subjects state and trait anxiety scores. For this information please fill out their compliance documentation found ["here"]([http://fcon_1000.projects.nitrc.org/indi/enhanced/sharing_phenotypic.html]) the data we provide is our nifti files that show where state and trait relate to the strength of the expression of the global mean signal or fMRI arousal template
 
 
 
