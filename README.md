@@ -30,18 +30,24 @@ This repo was designed with two folders:
 1. codes: to see the code used to derive any of the things we stated in our *Highlights* go here, for key information of what the code does go to the section  *codes info*
 2. data: due to our compliance with the Nathan Klein Institute Rockland we are unable to share the subjects state and trait anxiety scores. For this information please fill out their compliance documentation found ["here"](http://fcon_1000.projects.nitrc.org/indi/enhanced/sharing_phenotypic.html). The data we provide is our nifti files that show where state and trait relate to the strength of the expression of the global mean signal or fMRI arousal template.
 
-##Code Info
+## 💻: Code Info
 
 Information on all the codes within our folder codes is located below:
 
 1. Conduct_Group_ICA
-Information to conduct a group analysis can be found on FSL's website ["here"] (https://web.mit.edu/fsl_v5.0.10/fsl/doc/wiki/MELODIC.html).
- - fix_ICA_40.sh : our code that was used to generate a group ICA analysis with 40 components
+ - fix_ICA_40.sh : code that was used to generate a group ICA analysis with 40 components
  - ICA_fix_paths.R : code to derive the text file used as an input in fix_ICA_40.sh
-Note: we used manual inspection to identify which components were networks vs noise
+
+Note: we used manual inspection to identify which components were networks vs noise, for more information to conduct a group ICA analysis can be found on FSL's website ["here"](https://web.mit.edu/fsl_v5.0.10/fsl/doc/wiki/MELODIC.html).
 
 2. Derive_Main_Data
-We have a master code that derives the spatial and temporal data of our global fMRI components, conducts dual regression to derive network timeseries from our ICA components, functional connectivity pre and post global component regression on our networks of interest. Our code has comments to understand which sections derive certain components. For questions feel free to contact me, my information is at the end of this repo.
+
+- Obando_NKI_fMRIglobal_anx.m : a master code that derives the spatial and temporal data of our global fMRI components, conducts dual regression to derive network timeseries from our ICA components, functional connectivity pre and post global component regression on our networks of interest. Our code has comments to understand which sections derive certain components and below are functions we wrote needed to run the code. For questions feel free to contact me, my information is at the end of this repo.
+  - create_hr_basis_dt.m : function code needed Obando_NKI_fMRIglobal_anx.m to derive the hr basis functions to model heart rate fluctuations in fMRI
+  - regress_tc.m : function code needed Obando_NKI_fMRIglobal_anx.m to regress the global component form the networks time series
+  - retrieve_fc_values: function code needed in Obando_NKI_fMRIglobal_anx.m to store functional connectivity measures after pre and post regression
+   
+- Obando_derive_sd_of_global_info.m : code that derives the estimated drowsiness value (standard deviation of the fMRI arousal template), and the variation of the global mean signal.
 - 
 
 
