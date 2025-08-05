@@ -32,11 +32,19 @@ This repo was designed with two folders:
 
 ##Code Info
 
-Please follow the section of the code you are interested in to get the information to run the code
+Information on all the codes within our folder codes is located below:
 
 1. Conduct_Group_ICA
-   -Information to conduct a group analysis can be found on FSL website [here] (https://web.mit.edu/fsl_v5.0.10/fsl/doc/wiki/MELODIC.html)
- - fix_ICA_40.sh : code that was used to generate a group ICA analysis with 40 components 
+Information to conduct a group analysis can be found on FSL's website ["here"] (https://web.mit.edu/fsl_v5.0.10/fsl/doc/wiki/MELODIC.html).
+ - fix_ICA_40.sh : our code that was used to generate a group ICA analysis with 40 components
+ - ICA_fix_paths.R : code to derive the text file used as an input in fix_ICA_40.sh
+Note: we used manual inspection to identify which components were networks vs noise
+
+2. Derive_Main_Data
+We have a master code that derives the spatial and temporal data of our global fMRI components, conducts dual regression to derive network timeseries from our ICA components, functional connectivity pre and post global component regression on our networks of interest. Our code has comments to understand which sections derive certain components. For questions feel free to contact me, my information is at the end of this repo.
+- 
+
+
 
 
 
