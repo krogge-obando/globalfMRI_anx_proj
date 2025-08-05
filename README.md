@@ -1,5 +1,5 @@
 # :brain: Global effects in fMRI reveal brain markers of anxiety project
-Hello, this repo was created to provide the codes for conducting the analysis reported in the paper, ["Global effects in fMRI reveal brain markers of state and trait anxiety (Medirxn 2025)"]([https://www.medrxiv.org/content/10.1101/2025.07.15.25331571v1#:~:text=Results%3A%20We%20observe%20that%20the,tied%20to%20the%20anxious%20experience.])
+Hello, this repo was created to provide the codes for conducting the analysis reported in the paper, ["Global effects in fMRI reveal brain markers of state and trait anxiety (Medirxn 2025)"](https://www.medrxiv.org/content/10.1101/2025.07.15.25331571v1#:~:text=Results%3A%20We%20observe%20that%20the,tied%20to%20the%20anxious%20experience.)
 
 ## ⭐ Highlights
 This repo provides the code to derive:
@@ -27,8 +27,8 @@ Rstudio was used to conduct statistical analysis and visualizations to determine
 
 This repo was designed with two folders: 
 
-1. codes, to see the code used to derive any of the things we stated in our *Highlights* go here, for key information of what the code does go to the section  *folder codes info*
-2. data, due to our compliance with the Nathan Klein Institute Rockland we are unable to share the subjects state and trait anxiety scores. For this information please fill out their compliance documentation found ["here"]([http://fcon_1000.projects.nitrc.org/indi/enhanced/sharing_phenotypic.html]) the data we provide is our nifti files that show where state and trait relate to the strength of the expression of the global mean signal or fMRI arousal template
+1. codes: to see the code used to derive any of the things we stated in our *Highlights* go here, for key information of what the code does go to the section  *codes info*
+2. data: due to our compliance with the Nathan Klein Institute Rockland we are unable to share the subjects state and trait anxiety scores. For this information please fill out their compliance documentation found ["here"](http://fcon_1000.projects.nitrc.org/indi/enhanced/sharing_phenotypic.html) the data we provide is our nifti files that show where state and trait relate to the strength of the expression of the global mean signal or fMRI arousal template
 
 
 
