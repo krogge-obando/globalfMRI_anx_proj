@@ -21,7 +21,7 @@ Matlab was used to derive the fMRI global components, correlates of the global c
 
 - Rstudio version RStudio/2024.12.0+467
 
-Rstudio was used to conduct statistical analysis and visualizations to determine if temporal global components related to anxiety in code *Obando_GlobalComponents_Anxiety.R, and if any brain network connectivity measures related to anxiety pre and post global signal regression *Obando_Network_FC_pre_post_Regress.R*
+Rstudio was used to conduct statistical analysis and visualizations to determine if temporal global components related to anxiety in code *Obando_nki_anx_global_analysis_fig.R*, and if any brain network connectivity measures related to anxiety pre and post global signal regression *Obando_nki_multiple_regression_function_and_results.R*
 
 ## 📑 How to navigate the repo??
 
