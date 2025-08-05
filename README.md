@@ -55,10 +55,16 @@ Note: we used manual inspection to identify which components were networks vs no
 **3. Conduct_Main_Analysis_Visulizations**
 
 - Obando_nki_anx_global_analysis_fig.R : code that conducts the analysis to identify if estimated drowsines or GS_SD relates to state or trait anxiety. Also makes Figure 1) A & C in the paper.
+- Obando_nki_anx_maps_analysis.sh : sample code we used to run fslrandomise to identify brain clusters that relate global measures to anxiety. We only share the code that ran the arousal spatial maps to anxiety measures.
+  -derive4Dmaps.m : function code used to derive the 4D maps needed for fslrandomise, note this code 
 - Obando_nki_multiple_regression_function_and_results.R : code that conducts the regression analysis comparing brain connectivity to state and trait anxiety (uncorrected results).
 - FDR_analysis.R : code that conducts the fdr corrections for the results derived from Obando_nki_multiple_regression_function_and_results.R
 - Obando_violinPlots_Manuscript.R: Codes to generate Figure 2 B & C on the manuscript. Note data to run this is provided in data folder.
-- Lee_Obando_histogramPlots.R: Codes to generate supplementary Figure 3. 
+- Lee_Obando_histogramPlots.R: Codes to generate supplementary Figure 3.
+
+## ❓Have Questions
+
+For additional information about the project or how to use the codes feel free to reach out to me at my Vanderbilt email at kimberly.k.rogge-obando@vanderbilt.edu
 
 
    
