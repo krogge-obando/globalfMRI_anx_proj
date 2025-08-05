@@ -28,7 +28,15 @@ Rstudio was used to conduct statistical analysis and visualizations to determine
 This repo was designed with two folders: 
 
 1. codes: to see the code used to derive any of the things we stated in our *Highlights* go here, for key information of what the code does go to the section  *codes info*
-2. data: due to our compliance with the Nathan Klein Institute Rockland we are unable to share the subjects state and trait anxiety scores. For this information please fill out their compliance documentation found ["here"](http://fcon_1000.projects.nitrc.org/indi/enhanced/sharing_phenotypic.html) the data we provide is our nifti files that show where state and trait relate to the strength of the expression of the global mean signal or fMRI arousal template
+2. data: due to our compliance with the Nathan Klein Institute Rockland we are unable to share the subjects state and trait anxiety scores. For this information please fill out their compliance documentation found ["here"](http://fcon_1000.projects.nitrc.org/indi/enhanced/sharing_phenotypic.html). The data we provide is our nifti files that show where state and trait relate to the strength of the expression of the global mean signal or fMRI arousal template.
+
+##Code Info
+
+Please follow the section of the code you are interested in to get the information to run the code
+
+1. Conduct_Group_ICA
+   -Information to conduct a group analysis can be found on FSL website [here] (https://web.mit.edu/fsl_v5.0.10/fsl/doc/wiki/MELODIC.html)
+ - fix_ICA_40.sh : code that was used to generate a group ICA analysis with 40 components 
 
 
 
