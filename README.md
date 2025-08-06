@@ -47,6 +47,7 @@ Note: we used manual inspection to identify which components were networks vs no
   - create_hr_basis_dt.m : function code needed Obando_fMRIglobal_anx.m to derive the hr basis functions to model heart rate fluctuations in fMRI
   - regress_tc.m : function code needed Obando_fMRIglobal_anx.m to regress the global component form the networks time series
   - retrieve_fc_values: function code needed in Obando_fMRIglobal_anx.m to store functional connectivity measures after pre and post regression
+  - xcov_signals.m: function to run cross correlation between heart rate and networks or other global components. This function also stored the highest correlation. 
    
 - Obando_derive_sd.m : code that derives the estimated drowsiness value (standard deviation of the fMRI arousal template), and the variation of the global mean signal.
 - Obando_lags_test.m : code that investigated if lags of global components significantly alter brain connectivity relationships to anxiety. (It did not)
