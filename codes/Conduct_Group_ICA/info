@@ -1,3 +1,12 @@
 Info here is the same that can be found on our ReadMe.
 
+Conduct_Group_ICA
+
+ - fix_ICA_40.sh : code that was used to generate a group ICA analysis with 40 components
+ - ICA_fix_paths.R : code to derive the text file used as an input in fix_ICA_40.sh
+
+Note: we used manual inspection to identify which components were networks vs noise, for more information to conduct a group ICA analysis can be found on FSL's website at (https://web.mit.edu/fsl_v5.0.10/fsl/doc/wiki/MELODIC.html).
+
+To see our output from ICA_fix_paths please go to our repo path /data/fix_paths.txt
+
 
