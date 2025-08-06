@@ -7,6 +7,6 @@ Conduct_Group_ICA
 
 Note: we used manual inspection to identify which components were networks vs noise, for more information to conduct a group ICA analysis can be found on FSL's website at (https://web.mit.edu/fsl_v5.0.10/fsl/doc/wiki/MELODIC.html).
 
-To see our output from ICA_fix_paths please go to our repo path /data/fix_paths.txt
+To see our output from ICA_fix_paths please go to our repo path /data/fix_ica_path_list.txt
 
 
