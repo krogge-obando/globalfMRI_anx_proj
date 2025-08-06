@@ -51,7 +51,7 @@ Note: we used manual inspection to identify which components were networks vs no
    
 - Obando_global_sd.m : code that derives the estimated drowsiness value (standard deviation of the fMRI arousal template), and the variation of the global mean signal.
 - Obando_lags_test.m : code that investigated if lags of global components significantly alter brain connectivity relationships to anxiety. (It did not)
-  - generate_fmri_lags.m : function needed for Obando_lags_investigation.m that preforms lags of the global components
+  - generate_fmri_lags.m : function needed for Obando_lags_test.m that preforms lags of the global components
   - regress_tc_non_zscored.m: function that regresses the values similar to regress_tc but does not zscore the values in the function because they were previously zscored
 
 **3. Analysis_and_Visulizations**
@@ -61,7 +61,7 @@ Note: we used manual inspection to identify which components were networks vs no
   - derive4Dmaps.m : function code used to derive the 4D maps needed for fslrandomise.
 - Obando_net_regress_model.R : code that conducts the regression analysis comparing brain connectivity to state and trait anxiety (uncorrected results).
 - FDR_analysis.R : code that conducts the fdr corrections for the results derived from Obando_nki_multiple_regression_function_and_results.R
-- Obando_violin.R: Codes to generate Figure 2 B & C on the manuscript. Note: data to run this is provided in data folder.
+- Obando_Violin_fig.R: Codes to generate Figure 2 B & C on the manuscript. Note: data to run this is provided in data folder.
 - Lee_Obando_histogram.R: Codes to generate supplementary Figure 3.
 
 ## ❓Have Questions
