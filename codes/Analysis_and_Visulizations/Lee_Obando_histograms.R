@@ -53,20 +53,17 @@ labs(title = "Arousal and Global Signal (543 and 240 Subjects)",
 
 #Histograms for Correlation Between Heart Rate and FAI, and Between Heart Rate and Global Signal
 
-net_arousal <- read.csv("GlobalComponents_Corr_GlobalComponents_Fin.csv")
+df_543_net_arousal_cleaned <- df_543_net_corr_data[!is.na(df_543_net_corr_data$corrHA), ]
 
-df_net_arousal_cleaned <- net_arousal[!is.na(net_arousal$corrHA), ]
+write.csv(df_543_net_arousal_cleaned, "filtered_240_net_arousal.csv", row.names = FALSE)
 
-write.csv(df_net_arousal_cleaned, "filtered_240_net_arousal.csv", row.names = FALSE)
+hist(df_543_net_arousal_cleaned$corrHA)
 
-
-hist(df_net_arousal_cleaned$corrHA)
-
-hist(df_net_arousal_cleaned$corrHA , xlim = c(-1.0, 1.0), ylim = c(0, 150), col=rgb(1/2,1/2,1/2,1), border = "black", breaks = 20, xlab = "Pearson's Correlation", ylab = "Number of Subjects", main = 'Correlation Between Heart Rate and FAI') 
+hist(df_543_net_arousal_cleaned$corrHA , xlim = c(-1.0, 1.0), ylim = c(0, 150), col=rgb(1/2,1/2,1/2,1), border = "black", breaks = 20, xlab = "Pearson's Correlation", ylab = "Number of Subjects", main = 'Correlation Between Heart Rate and FAI') 
 
 
-hist(net_arousal$corrHG)
+hist(df_543_net_arousal_cleaned$corrHG)
 
-hist(df_net_arousal_cleaned$corrHG , xlim = c(-1.0, 1.0), ylim = c(0, 150), col=rgb(1/2,1/2,1/2,1), border = "black", breaks = 20, xlab = "Pearson's Correlation", ylab = "Number of Subjects", main = 'Correlation Between Heart Rate and Global Signal') 
+hist(df_543_net_arousal_cleaned$corrHG , xlim = c(-1.0, 1.0), ylim = c(0, 150), col=rgb(1/2,1/2,1/2,1), border = "black", breaks = 20, xlab = "Pearson's Correlation", ylab = "Number of Subjects", main = 'Correlation Between Heart Rate and Global Signal') 
 
 
