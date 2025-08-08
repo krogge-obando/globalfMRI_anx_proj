@@ -1,7 +1,9 @@
-#This code will be a function that runs ANCOVA while correcting for age,
-#gender, and, ethnicity in the FC compaarisions with state and trait anxiety
+#This code will be a function that runs mixed model while correcting for age,
+#gender, and, ethnicity in the FC comparisions with state and trait anxiety and outputs the beta an p-values results
+
 
 #install and open packages
+
 #install.packages("dplyr")
 #install.packages("tidyverse")
 #install.packages("sensemakr")
@@ -14,22 +16,23 @@ library(rlang)
 
 #upload all dataframes
 
-df_stai<-read.csv("/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/nki_data_stai.csv")
+df_stai<-read.csv("nki_data_stai.csv")
 
-df_demo<-read.csv("/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/nki_data_dem.csv")
+df_demo<-read.csv("nki_data_dem.csv")
 
-df_raw<-read.csv("/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/non_regressed.csv")
+df_raw<-read.csv("non_regressed.csv")
 
-df_a<-read.csv("/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/regressed_A.csv")
+df_a<-read.csv("regressed_A.csv")
 
-df_h<-read.csv("/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/regressed_H.csv")
+df_h<-read.csv("regressed_H.csv")
 
-df_g<-read.csv("/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/regressed_G.csv")
+df_g<-read.csv("regressed_G.csv")
 
-df_ag<-read.csv("/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/regressed_AG.csv")
+df_ag<-read.csv("regressed_AG.csv")
 
-df_all<-read.csv("/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/regressed_All.csv")
+df_all<-read.csv("regressed_All.csv")
 
+#make a function that conducts the multiple regression and stores beta, p-value and the partial effect size f2.
 
   multiple_regression_beta_pvalue<- function(net,anx,df) {
   
@@ -61,7 +64,8 @@ df_all<-read.csv("/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/reg
   #}
   
   
-  
+#Function that runst the previous function for all of the networks of interest. 
+
 multiple_regression_results<-function(df){
 
 ddmn.vdmn<-multiple_regression_beta_pvalue(df$ddmn.vdmn,df$state_tscore,df)
@@ -134,6 +138,7 @@ trait.net<-do.call("rbind",list(trait.ddmn.vdmn,trait.ddmn.sal,trait.ddmn.lcen,t
 
 multiple_regression_results_df<-cbind(state.net,trait.net)}
 
+#Now the functions are complete we need to run both of these functions to complete our analysis.
 
 #Select variables of interest from large data sets
 
@@ -143,15 +148,14 @@ df_model<- left_join(df_stai_selected,df_demo_selected, by="ID")
 
 
 
-#do this for raw_regressed
+#conduct analysis this for raw_regressed
 df_non_regressed<-left_join(df_raw,df_model,by="ID")
 
 multiple_regression_non_regressed<-multiple_regression_results(df_non_regressed)
 
+#store data
 write.csv(multiple_regression_non_regressed,"/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/multiple_regression_results_non_regressed_543.csv")
 
-
-#write.csv(ANCOVA_non_regressed,"/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/ANCOVA_results_non_regressed_543.csv")
 
 
 #do this for arousal regressed
