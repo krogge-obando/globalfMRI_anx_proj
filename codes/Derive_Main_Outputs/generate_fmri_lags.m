@@ -1,3 +1,4 @@
+%Author: Kim Kundert-Obando for questions please reach out to me at k.rogge.obando@gmail.com
 function [front_time_course_lagged_stored, back_time_course_lagged_stored]=generate_fmri_lags(time_course,lag)
 
 for conduct_lag= 1:lag
