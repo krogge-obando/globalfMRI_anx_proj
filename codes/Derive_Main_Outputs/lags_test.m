@@ -1,4 +1,7 @@
 %This code will regress 3 TR (6.3 sec) lags of global components
+
+%Author: Kim Kundert-Obando for questions please reach out to me at k.rogge.obando@gmail.com
+
 %%
 %load subjects and paths
 subj= readtable('/data1/neurdylab/datasets/nki_rockland/vigilance_analysis/great_HR_sub_coded.txt', 'readvariablenames', 0);
