@@ -1,7 +1,7 @@
 #NKI- Global Component variation relates to anxiety analysis and figure
-#Author Kim Rogge-Obando
+#Author: Kim Kundert-Obando for questions please reach out to me at k.rogge.obando@gmail.com
 
-#Installing packages
+#load packages
 library(ggplot2)
 library(tidyr)
 library(dplyr)
@@ -10,10 +10,10 @@ library(rlang)
 library(sensemakr)
 
 #loading dataframe stai
-df_anx_demo<- read.csv('/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/fix_net_vig_vigr_globalr_anx_dep_motion_corrected.1.31.24.csv')
+df_anx_demo<- read.csv('543_demo.csv')
 
-df_ar<- read.csv('/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/estimated_drowsiness.csv')
-df_gs<- read.csv('/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/543_gs_sd.csv')
+df_ar<- read.csv('estimated_drowsiness.csv')
+df_gs<- read.csv('543_gs_sd.csv')
 
 df_anx_demo<-select(df_anx_demo, c('ID','age','gender','ethnicity','state_tscore','trait_tscore'))
 
