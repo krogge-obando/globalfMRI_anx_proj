@@ -1,6 +1,8 @@
 %This code will generate a csv file with the global component gs_sd or estimated_drowsiness value of
 %the 543 subjects
 
+%Author: Kim Kundert-Obando for questions please reach out to me at k.rogge.obando@gmail.com
+
 %Load subject list
 
 subj= readtable('/data1/neurdylab/datasets/nki_rockland/vigilance_analysis/great_HR_sub_coded.txt', 'readvariablenames', 0);
