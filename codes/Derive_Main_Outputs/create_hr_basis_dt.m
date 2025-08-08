@@ -1,4 +1,3 @@
-%Author: Kim Kundert-Obando with help from Dr. Catie Chang for questions please reach out to me at k.rogge.obando@gmail.com
 function X_physio = create_hr_basis_dt(hr,TR)
 % create physiological basis set, based on the time and
 % dispersion derivatives of each gamma in the RRF, and each gamma
