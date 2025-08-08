@@ -1,4 +1,6 @@
-%This code computes the analysis presented in Rogge-Obando et al., 2024
+%This code computes the analysis presented in Rogge-Obando et al., 2024 mediarchive
+
+%Author: Kim Kundert-Obando and Dr. Catie Chang for questions please reach out to me at k.rogge.obando@gmail.com
 
 %write to clear the code 
 clear; clc; close all; 
