@@ -1,16 +1,22 @@
-#This code will generate the violin plots
+#Author Kim Kundert-Obando to contact for any information please email k.rogge.obando@gmail.com
 
+#This code will generate the violin plots for Fig 2 in the paper.
+
+#load needed packages may need to install before running library.
 library(tidyr)
 library(dplyr)
 library(ggplot2)
 
-df<-read.csv("/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/Networks_Corr_Global_Components.csv")
+#Load data
+df<-read.csv("Networks_Corr_Global_Components.csv")
 
+#clean up the dataframe
 df_543 <- df[, 1:(ncol(df) - 5)]
 
+#make the data frame for the subset of 240 subjects
 df_240<-drop_na(df)
 
-# Assuming your data frame is named df
+# Convert df to long format
 long_df_543 <- df_543 %>%
   pivot_longer(
     cols = -ID,  # all columns except ID
@@ -31,7 +37,7 @@ long_df_543 <- df_543 %>%
                      )
   )
 
-# Assuming your data frame is named df
+
 long_df_240 <- df_240 %>%
   pivot_longer(
     cols = -ID,  # all columns except ID
@@ -54,6 +60,7 @@ long_df_240 <- df_240 %>%
   )
 
 
+#generate the plots with raw data (not adjusting arousal data)
 
 ggplot(long_df_543, aes(x = Network, y = Correlation, fill = Component)) +
      geom_violin(trim = FALSE, alpha = 0.5, position = position_dodge(0.9)) + 
@@ -79,16 +86,19 @@ ggplot(long_df_240, aes(x = Network, y = Correlation, fill = Component)) +
     fill = "Global Component") +      
   scale_fill_manual(values = c("#C66699", "#660099", "#3333FF"), labels = c("FAI", "GS","HR"))
 
-#Now we will multiply by negative to arousal
-
-
-library(dplyr)
+#Now we will multiply by negative to arousal measure
 
 long_df_543 <- long_df_543 %>%
   mutate(
     Correlation = if_else(Component == "FAI", Correlation * -1, Correlation)
   )
 
+long_df_240 <- long_df_240 %>%
+  mutate(
+    Correlation = if_else(Component == "FAI", Correlation * -1, Correlation)
+  )
+
+#generate plots 
 
 ggplot(long_df_543, aes(x = Network, y = Correlation, fill = Component)) +
   geom_violin(trim = FALSE, alpha = 0.5, position = position_dodge(0.9)) + 
@@ -102,11 +112,6 @@ ggplot(long_df_543, aes(x = Network, y = Correlation, fill = Component)) +
     fill = "Global Component") +      
   scale_fill_manual(values = c("#C66699", "#660099", "#3333FF"), labels = c("FAI", "GS","HR"))
 
-
-long_df_240 <- long_df_240 %>%
-  mutate(
-    Correlation = if_else(Component == "FAI", Correlation * -1, Correlation)
-  )
 
 ggplot(long_df_240, aes(x = Network, y = Correlation, fill = Component)) +
   geom_violin(trim = FALSE, alpha = 0.5, position = position_dodge(0.9)) + 
