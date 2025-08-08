@@ -1,3 +1,4 @@
+#Author: Kim Kundert-Obando for questions please reach out to me at k.rogge.obando@gmail.com
 #This code will be a function that runs mixed model while correcting for age,
 #gender, and, ethnicity in the FC comparisions with state and trait anxiety and outputs the beta an p-values results
 
