@@ -1,4 +1,4 @@
-%This code will be a function that derives 4D nifti file, v1 v2 v3 are
+%This code will be a function that derives 4D nifti file of data that is in 2D format, v1 v2 v3 are
 %voxel dimensions of original nifti data
 
 function nifti_map = derive_4Dmaps(file,file_name,brainVox,mask_info,v1,v2,v3)
