@@ -1,4 +1,6 @@
+#Author: Kim Kundert-Obando for questions please reach out to me at k.rogge.obando@gmail.com
 
+#install packaged and open them
 install.packages("FDRestimation")
 library(FDRestimation)
 
@@ -12,7 +14,7 @@ p_val_state_mean_hr <-state_mean_hr[[3]]
 p_val_state_sd_vig<-state_sd_vig[[3]]
 
 
-#Here I am making them into a list that will be compared against eachoter
+#Here I am making them into a list that will be compared against eachother
 p_val_list_state<-list(p_val_state_sd_vig,p_val_state_mean_hr,p_val_state_mean_hrv)
 
 p_val_list_trait<-list(p_val_trait_sd_vig,p_val_trait_mean_hr,p_val_state_mean_hrv)
