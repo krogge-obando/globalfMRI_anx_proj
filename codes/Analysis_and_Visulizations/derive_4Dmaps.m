@@ -1,3 +1,4 @@
+%Author: Kim Kundert-Obando for questions please reach out to me at k.rogge.obando@gmail.com
 %This code will be a function that derives 4D nifti file of data that is in 2D format, v1 v2 v3 are
 %voxel dimensions of original nifti data
 
