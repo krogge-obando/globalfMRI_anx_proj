@@ -1,4 +1,8 @@
+#Author: Terra Lee Checked:Kim-Kundert Obando
 
+#The purpose of this code is to generate the histogram figures in Supplementary Figure 3 in the manuscript.
+
+#load data
 df_543_net_corr_data <-read.csv("GlobalComponents_Corr_GlobalComponents_Fin.csv")
 df_240_net_corr_data <- na.omit(df_543_net_corr_data)
 
@@ -24,15 +28,6 @@ df_240_net_corr_data$corrAG <- as.numeric(df_240_net_corr_data$corrAG)
 df_543_net_corr_data$corrAG <- as.numeric(df_543_net_corr_data$corrAG)
 
 
-ls()
-
-set.seed(42)
-hist(df_543_net_corr_data$corrAG, col=rgb(0,0,1,1/4), xlim=c(0,200))
-hist(df_240_net_corr_data$corrAG, col=rgb(1,0,0,1/4), xlim=c(0,200), add = TRUE)
-
-
-#trial 3
-
 set.seed(42)
 hist_543 <- hist(df_543_net_corr_data$corrAG, breaks = 20, ylim=c(0,200))                     # centered at 4
 hist_240 <- hist(df_240_net_corr_data$corrAG, breaks = 20, ylim=c(0,200))                     # centered at 6
@@ -55,12 +50,11 @@ labs(title = "Arousal and Global Signal (543 and 240 Subjects)",
 
 df_543_net_arousal_cleaned <- df_543_net_corr_data[!is.na(df_543_net_corr_data$corrHA), ]
 
-write.csv(df_543_net_arousal_cleaned, "filtered_240_net_arousal.csv", row.names = FALSE)
+#write.csv(df_543_net_arousal_cleaned, "filtered_240_net_arousal.csv", row.names = FALSE)
 
 hist(df_543_net_arousal_cleaned$corrHA)
 
 hist(df_543_net_arousal_cleaned$corrHA , xlim = c(-1.0, 1.0), ylim = c(0, 150), col=rgb(1/2,1/2,1/2,1), border = "black", breaks = 20, xlab = "Pearson's Correlation", ylab = "Number of Subjects", main = 'Correlation Between Heart Rate and FAI') 
-
 
 hist(df_543_net_arousal_cleaned$corrHG)
 
