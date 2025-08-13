@@ -155,7 +155,7 @@ df_non_regressed<-left_join(df_raw,df_model,by="ID")
 multiple_regression_non_regressed<-multiple_regression_results(df_non_regressed)
 
 #store data
-write.csv(multiple_regression_non_regressed,"/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/multiple_regression_results_non_regressed_543.csv")
+write.csv(multiple_regression_non_regressed,"multiple_regression_results_non_regressed_543.csv")
 
 
 
@@ -164,7 +164,7 @@ df_a_demo<-left_join(df_a,df_model)
 
 multiple_regression_a_regressed<-multiple_regression_results(df_a_demo)
 
-write.csv(multiple_regression_a_regressed,"/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/multiple_regression_results_A_regressed_543.csv")
+write.csv(multiple_regression_a_regressed,"multiple_regression_results_A_regressed_543.csv")
 
 
 #do this for global signal regressed
@@ -173,7 +173,7 @@ df_g_demo<-left_join(df_g,df_model)
 
 multiple_regression_g_regressed<-multiple_regression_results(df_g_demo)
 
-write.csv(multiple_regression_g_regressed,"/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/multiple_regression_results_G_regressed_543.csv")
+write.csv(multiple_regression_g_regressed,"multiple_regression_results_G_regressed_543.csv")
 
 
 #do this for hr regressed
@@ -182,7 +182,7 @@ df_hr_demo_clean<- df_hr_demo %>% drop_na(ddmn.vdmn)
 
 multiple_regression_hr_regressed<-multiple_regression_results(df_hr_demo_clean)
 
-write.csv(multiple_regression_hr_regressed,"/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/multiple_regression_results_HR_regressed_543.csv")
+write.csv(multiple_regression_hr_regressed,"multiple_regression_results_HR_regressed_543.csv")
 
 
 
@@ -193,18 +193,18 @@ df_240_nr<-left_join(df_240,df_non_regressed)
 
 multiple_regression_non_regressed_240<-multiple_regression_results(df_240_nr)
 
-write.csv(multiple_regression_non_regressed_240,"/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/multiple_regression_results_non_regressed_240.csv")
+write.csv(multiple_regression_non_regressed_240,"multiple_regression_results_non_regressed_240.csv")
 
 df_240_a<-join(df_240,df_a_demo)
 
 multiple_regression_a_regressed_240<-multiple_regression_results(df_240_a)
 
-write.csv(multiple_regression_a_regressed_240,"/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/multiple_regression_results_A_regressed_240.csv")
+write.csv(multiple_regression_a_regressed_240,"multiple_regression_results_A_regressed_240.csv")
 
 df_240_g<-left_join(df_240,df_g_demo)
 multiple_regression_g_regressed_240<-multiple_regression_results(df_240_g)
 
-write.csv(multiple_regression_g_regressed_240,"/Users/roggeokk/Desktop/Projects/nki_anx_vig_proj/nki_data/multiple_regression_results_G_regressed_240.csv")
+write.csv(multiple_regression_g_regressed_240,"multiple_regression_results_G_regressed_240.csv")
 
 
 
