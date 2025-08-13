@@ -5,19 +5,20 @@
 %write to clear the code 
 clear; clc; close all; 
 
-%write out all paths
-main_path = '/data1/neurdylab/datasets/nki_rockland/proc/';
-fix_path  = '/data1/neurdylab/datasets/nki_rockland/fix_ica/';
+%Load envirionment
+
+loadenv("globalfMRI_anx_proj_MATLAB_env.env")
+
 
 % mask out the skull (nonzero voxels)
-mni_mask = niftiread('/data1/neurdylab/MNI152_T1_2mm_brain_mask_filled.nii.gz');
+mni_mask = niftiread(MNI_MASK);
 brainVox = find(mni_mask>0);
 
 % define parameters
 TR = 1.4;
 
 % Load ICA mask that has 40 components
-ica_mask = niftiread("/data1/neurdylab/datasets/nki_rockland/vigilance_analysis/FIX_ICA_40comps/melodic_IC.nii.gz");
+ica_mask = niftiread(ICA_MASK);
 
 % Assemble maps into matrix
 ica_dims = size(ica_mask);
@@ -32,7 +33,7 @@ Xnets_1=Xnets_0';
 Xnets = [ones(size(Xnets_1,1),1),  zscore(Xnets_1)];
 
 % load arousal template also known as vigilance template
-arousal_template = niftiread('/data1/neurdylab/datasets/nki_rockland/vigilance_analysis/full_template.nii');
+arousal_template = niftiread(AROUSAL_TEMPLATE); %this can be downloaded at https://github.com/neurdylab/fMRIAlertnessDetection
 
 % reshape template from 3-D to 1-D to be a vector
   
@@ -40,11 +41,10 @@ arousal_template = niftiread('/data1/neurdylab/datasets/nki_rockland/vigilance_a
     temp_mask = temp_reshape(brainVox);
 
 %this is the text file that will load in all the subject that was corrected using fix_ica
-%subj= readtable('/data1/neurdylab/datasets/nki_rockland/vigilance_analysis/great_HR_sub_coded.txt', 'readvariablenames', 0);
-subj= readtable('/data1/neurdylab/datasets/nki_rockland/vigilance_analysis/extra_sub.txt', 'readvariablenames', 0);
+subj= readtable(MAIN_PATH,'/great_HR_sub_coded.txt', 'readvariablenames', 0);
 
 % where to save the outputs for each subject
-save_path = '/data1/neurdylab/datasets/nki_rockland/vigilance_analysis/subject_outputs/';
+save_path = SAVE_PATH;
 mkdir(save_path);
 
 % set up matrices that will store data for all subjects
@@ -204,7 +204,7 @@ for subject = 1:height(subj)
     if subj.Var2(subject) == 1 %a 1 here indicates that this subject had clean HR
 
         % load physio file
-        physio_file=['/data1/neurdylab/datasets/nki_rockland/preproc_physio/',this_subject,'/',this_subject,'_ses-BAS1_task-rest_acq-1400_physio_physOUT.mat'];
+        physio_file=[PREPROC_PHYSIO_PATH,this_subject,'/',this_subject,'_ses-BAS1_task-rest_acq-1400_physio_physOUT.mat'];
         physio_data = load(physio_file);
 
         % Extract the HR time series from the 'REGS' field
