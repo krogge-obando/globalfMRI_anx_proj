@@ -10,6 +10,7 @@ library(rlang)
 library(sensemakr)
 
 #loading dataframe stai
+#redundant comment
 df_anx_demo<- read.csv('543_demo.csv')
 
 df_ar<- read.csv('estimated_drowsiness.csv')
@@ -24,6 +25,7 @@ df<- left_join(df,df_gs,by="ID")
 #df<-subset(df,df$age < 55)
 
 #Change the scores and age to numeric values
+#Redundant comment
 df$trait_tscore<-as.numeric(df$trait_tscore)
 df$state_tscore<-as.numeric(df$state_tscore)
 df$age<-as.numeric(df$age)
@@ -47,6 +49,7 @@ equation2=function(x){coef(fit_trait_a)[2]*x+coef(fit_trait_a)[1]}
 df_plot<-df[, c("estimated_drowsiness","state_tscore","trait_tscore")]
 
 #renaming colomn names to state and trait for plot
+#redundant comment
 colnames(df_plot)[colnames(df_plot)=="state_tscore"] ="state"
 colnames(df_plot)[colnames(df_plot)=="trait_tscore"] ="trait"
 

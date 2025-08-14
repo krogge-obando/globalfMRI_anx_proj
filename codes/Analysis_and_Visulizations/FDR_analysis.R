@@ -1,6 +1,7 @@
 #Author: Kim Kundert-Obando for questions please reach out to me at k.rogge.obando@gmail.com
 
 #install packaged and open them
+#Redundant comment
 install.packages("FDRestimation")
 library(FDRestimation)
 
