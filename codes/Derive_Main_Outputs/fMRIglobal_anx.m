@@ -1,6 +1,6 @@
 %This code computes the analysis presented in Rogge-Obando et al., 2024 mediarchive
 
-%Author: Kim Kundert-Obando and Dr. Catie Chang for questions please reach out to me at k.rogge.obando@gmail.com
+%Author: Kim Kundert-Obando and Dr. Catie Chang for questions please reach out to me at k.rogge.obando@gmail.com or kim.kundert.obando@vanderbilt.edu
 
 %write to clear the code 
 clear; clc; close all; 
@@ -67,8 +67,6 @@ corrsHG_allsub = [];
 
 global_signal_filename_ps_all=[];
 global_signal_filename_z_all=[];
-
-
 
 
 subject_IDs = {};
@@ -184,7 +182,7 @@ for subject = 1:height(subj)
     %figure; plot(vig_tc);
     
     %save tc
-    arousal_filename = [save_path, '/', this_subject,'_arousal_tc.mat'];
+    arousal_filename = [S, '/', this_subject,'_arousal_tc.mat'];
     save(arousal_filename,"arousal_tc")
 
     % arousal map
@@ -194,7 +192,7 @@ for subject = 1:height(subj)
     arousal_map=Beta_A(2,:);
     
     %save map
-    arousal_sm_filename = [save_path, '/', this_subject,'_arousal_sm.mat'];
+    arousal_sm_filename = [SAVE_PATH, '/', this_subject,'_arousal_sm.mat'];
     save(arousal_sm_filename,"arousal_map")
 
 
@@ -256,7 +254,7 @@ orig_tc = network_signals;
 orig_fc = corr(network_signals);
 
 % store the data for this subject
-regression_analysis_filename=[save_path,'/',this_subject,'_regression_analysis_out.mat']
+regression_analysis_filename=[SAVE_PATH,'/',this_subject,'_regression_analysis_out.mat']
 save(regression_analysis_filename, ...
      'regressed_A_tc', 'regressed_A_fc', ...
      'regressed_G_tc', 'regressed_G_fc', ...
