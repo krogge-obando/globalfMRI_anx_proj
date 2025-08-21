@@ -66,7 +66,7 @@ Note: we used manual inspection to identify which components were networks vs no
 
 ## ❓Have Questions
 
-For additional information about the project or how to use the codes feel free to reach out to me at my Vanderbilt email at kimberly.k.rogge-obando@vanderbilt.edu
+For additional information about the project or how to use the codes feel free to reach out to me at my Vanderbilt email at kimberly.kundert.obando@vanderbilt.edu
 
 
    
