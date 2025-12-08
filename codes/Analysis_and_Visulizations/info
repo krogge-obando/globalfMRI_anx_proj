@@ -1,6 +1,8 @@
 
 Analysis_and_Visulizations info
 
+Note: These are for the paper submitted at medirxn if you are interested in our codes for visulization for the submission at Cerebral Cortex please look at file codes_2
+
 - Obando_anx_global_analysis_fig.R : code that conducts the analysis to identify if estimated drowsines or GS_SD relates to state or trait anxiety. Also makes Figure 1) A & C in the paper.
 - Obando_derive_anx_maps.sh : sample code we used to run fslrandomise to identify brain clusters that relate global measures to anxiety. We only share the code that ran the arousal spatial maps to anxiety measures.
 -derive4Dmaps.m : function code used to derive the 4D maps needed for fslrandomise, note this code reshaped data to initial nifiti size which must be changed if your data is not in MNI1596thgen space.
