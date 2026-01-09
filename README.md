@@ -8,8 +8,8 @@ This repo provides the code to derive:
 - temporal and spatial data of the fMRI global components (global mean signal, fMRI arousal template, heart rate)
 - functional connectivity of networks pre and post regression of global components
 - main analysis conducted in the paper
-- code to generate Figure 1 A & C, Figure 2B & C, and supplimentary Figure 3 of the paper.
-- Data only supplied to generate Figure 2 and Sup.Figure 3.
+- code to generate Figure 1 A & C, Figure 2B & C, and supplimentary Figure 3 of the paper on medirxn.
+- Data only supplied to generate Figure 2 and Sup.Figure 3 on medirxn.
 - our nifti files of where state and trait anxiety related to the global mean signal and fMRI arousal template
 
 ## 📑 How to navigate the repo??
