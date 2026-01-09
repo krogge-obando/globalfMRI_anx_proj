@@ -17,8 +17,8 @@ This repo provides the code to derive:
 This repo was designed with two folders: 
 
 1. codes: to see the code used to derive any of the things we stated in our *Highlights* go here, for key information of what the code does go to the section  *codes info*
-2. codes_2: updated codes for the resubmission to Cerebral Cortex.
-3. data: due to our compliance with the Nathan Klein Institute Rockland we are unable to share the subjects state and trait anxiety scores which limits the data we can share. To obtain the state and trait data please fill out their data usage agreement form found ["here"](http://fcon_1000.projects.nitrc.org/indi/enhanced/sharing_phenotypic.html). The data we provide is: our nifti files that show where state and trait relate to the strength of the expression of the global mean signal or fMRI arousal template, data to generate Figures 2 B & C as well as supplementary Figure 3.
+2. codes_2: updated codes for the resubmission to Cerebral Cortex. We have introduced the repeated anova and linear model analysis to test pre and post regression analysis.
+3. data: due to our compliance with the Nathan Klein Institute Rockland we are unable to share the subjects state and trait anxiety scores which limits the data we can share. To obtain the state and trait data please fill out their data usage agreement form found ["here"](http://fcon_1000.projects.nitrc.org/indi/enhanced/sharing_phenotypic.html). The data we provide is: our nifti files that show where state and trait relate to the strength of the expression of the global mean signal or fMRI arousal template, data to generate Figures 2 B & C as well as supplementary Figure 3 of our medirxn paper. To generate violin plots of or Cerebral Cortex Figure 4.D and E we have violin plot code available in codes_2.
 
 ## 🧭 Software used in this project
 
@@ -46,7 +46,7 @@ Note: we used manual inspection to identify which components were networks vs no
 
 **2. Derive_Main_Outputs**
 
-- fMRIglobal_anx.m : a master code that derives the spatial and temporal data of our global fMRI components, conducts dual regression to derive network timeseries from our ICA components, functional connectivity pre and post global component regression on our networks of interest. Our code has comments to understand which sections derive certain components and below are functions we wrote needed to run the code. For questions feel free to contact me, my information is at the end of this repo.
+- fMRIglobal_anx.m : a master code that derives the spatial and temporal data of our global fMRI components [NOTE our updated code is in codes_2 that removes additional motion regressors], conducts dual regression to derive network timeseries from our ICA components, functional connectivity pre and post global component regression on our networks of interest. Our code has comments to understand which sections derive certain components and below are functions we wrote needed to run the code. For questions feel free to contact me, my information is at the end of this repo.
   - create_hr_basis_dt.m : function code needed fMRIglobal_anx.m to derive the hr basis functions to model heart rate fluctuations in fMRI
   - regress_tc.m : function code needed fMRIglobal_anx.m to regress the global component form the networks time series
   - retrieve_fc_values: function code needed in fMRIglobal_anx.m to store functional connectivity measures after pre and post regression
@@ -59,7 +59,7 @@ Note: we used manual inspection to identify which components were networks vs no
 
 **3. Analysis_and_Visulizations**
 
-- anx_global_analysis_fig.R : code that conducts the analysis to identify if estimated drowsines or GS_SD relates to state or trait anxiety. Also makes Figure 1) A & C in the paper.
+- anx_global_analysis_fig.R : code that conducts the analysis to identify if estimated drowsines or GS_SD relates to state or trait anxiety. Also makes Figure 1) A & C in the paper on medrxiv .
 - derive_anx_maps.sh : sample code we used to run fslrandomise to identify brain clusters that relate global measures to anxiety. We only share the code that ran the arousal spatial maps to anxiety measures.
   - derive4Dmaps.m : function code used to derive the 4D maps needed for fslrandomise.
 - net_regress_model.R : code that conducts the regression analysis comparing brain connectivity to state and trait anxiety (uncorrected results).
