@@ -1,5 +1,5 @@
 # :brain: Global effects in fMRI reveal brain markers of anxiety project
-Hello, this repo was created to provide the codes for conducting the analysis reported in the paper, ["Global effects in fMRI reveal brain markers of state and trait anxiety (Medirxn 2025)"](https://www.medrxiv.org/content/10.1101/2025.07.15.25331571v1#:~:text=Results%3A%20We%20observe%20that%20the,tied%20to%20the%20anxious%20experience.)
+Hello, this repo was created to provide the codes for conducting the analysis reported in the paper, ["Global effects in fMRI reveal brain markers of state and trait anxiety (Medirxn 2025)"](https://www.medrxiv.org/content/10.1101/2025.07.15.25331571v1#:~:text=Results%3A%20We%20observe%20that%20the,tied%20to%20the%20anxious%20experience.) And the updated codes for conducting the final manuscript published at Cerebral Cortex that can be read ["here"](https://academic.oup.com/cercor/article/36/2/bhag008/8488885)
 
 Update: We have provided codes used in the resubmission to Cerebral Cortex!
 
